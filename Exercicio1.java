@@ -8,14 +8,24 @@ public class Exercicio1 {
 		 Scanner input = new Scanner(System.in);   
 		 
 		 int x, y; // primeiro número e segundo número 
-		 int soma, subt, div, mult; // operações  
+		 int soma, subt, mult; // operações
+		 double div; 
 		 
 		 System.out.print("Digite o primeiro número:" );   
 		 x = input.nextInt();   
 		 System.out.print("Digite o segundo número:" );   
 		 y = input.nextInt();   
 		 
-		 //escreva seu código aqui
+		 soma = x + y;
+		 subt = x - y;
+		 mult = x * y;
+		 div = (double) x / y;
+
+		 System.out.println("Resultados: " +
+                   "\nSoma: " + soma +
+                   "\nSubtração: " + subt +
+                   "\nDivisão: " + div +
+                   "\nMultiplicação: " + mult);
 
 		 input.close();
 	}
