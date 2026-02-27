@@ -35,7 +35,26 @@ public class Exercicio13 {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 
-		 //escreva seu código aqui
+		 System.out.println("Digite o total de horas extras realizadas no mês: ");
+		 double horasExtras = input.nextDouble();
+
+		 System.out.println("Digite o total de horas-falta registradas no mês: ");
+		 double horasFaltas = input.nextDouble();
+
+		 double H = horasExtras - (0.67 * horasFaltas);
+		 double minutos = H * 60;
+
+		 if (minutos < 600) {
+			 System.out.println("Valor da Gratificação: R$ 100,00");
+		 } else if (minutos >= 600 && minutos <= 1200) {
+			 System.out.println("Valor da Gratificação: R$ 200,00");
+		 } else if (minutos > 1200 && minutos <= 1800) {
+			 System.out.println("Valor da Gratificação: R$ 300,00");
+		 } else if (minutos > 1800 && minutos <= 2400) {
+			 System.out.println("Valor da Gratificação: R$ 400,00");
+		 } else {
+			 System.out.println("Valor da Gratificação: R$ 500,00");
+		 }
 		
 		input.close();
 	}

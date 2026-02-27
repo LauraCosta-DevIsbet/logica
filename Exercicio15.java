@@ -8,7 +8,22 @@ public class Exercicio15 {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in); 
 
-		//escreva seu código aqui
+		System.out.println("Qual o seu salário bruto?");
+		double salarioBruto = input.nextDouble();
+
+		double gratificacao;
+		if (salarioBruto <= 350) {
+			gratificacao = 100;
+		} else if (salarioBruto > 350 && salarioBruto <= 600) {
+			gratificacao = 75;
+		} else if (salarioBruto > 600 && salarioBruto <= 900) {
+			gratificacao = 50;
+		} else {
+			gratificacao = 35;
+		}
+		
+		double salarioLiquido = salarioBruto + gratificacao - (salarioBruto * 0.07);
+		System.out.println("Salário líquido: R$ " + salarioLiquido);
 		
 		input.close();
 	}

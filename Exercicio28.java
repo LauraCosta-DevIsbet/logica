@@ -9,7 +9,24 @@ public class Exercicio28 {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		
-		 //escreva seu código aqui
+		System.out.print("Digite o primeiro ângulo em graus: ");
+        int ang1 = input.nextInt();
+        System.out.print("Digite o segundo ângulo em graus: ");
+        int ang2 = input.nextInt();
+        System.out.print("Digite o terceiro ângulo em graus: ");
+        int ang3 = input.nextInt();
+
+        int soma = ang1 + ang2 + ang3;
+
+        if (soma != 180) {
+            System.out.println("Os ângulos fornecidos não formam um triângulo.");
+        } else if (ang1 == 90 || ang2 == 90 || ang3 == 90) {
+            System.out.println("Triângulo Retângulo");
+        } else if (ang1 > 90 || ang2 > 90 || ang3 > 90) {
+            System.out.println("Triângulo Obtusângulo");
+        } else {
+            System.out.println("Triângulo Acutângulo");
+        }
 		
 		input.close();
 	}

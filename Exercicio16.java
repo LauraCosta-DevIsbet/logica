@@ -8,7 +8,23 @@ public class Exercicio16 {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in); 
 
-		//escreva seu código aqui
+		System.out.print("Qual o salário de Carlos?");
+        double salarioCarlos = input.nextDouble();
+
+        double salarioJoao = salarioCarlos / 3.0;
+
+        double montanteCarlos = salarioCarlos;
+        double montanteJoao = salarioJoao;
+
+        int meses = 0;
+
+        while (montanteJoao < montanteCarlos) {
+            montanteCarlos *= 1.02; // 2% ao mês
+            montanteJoao *= 1.05;   // 5% ao mês
+            meses++;
+        }
+
+        System.out.println("Quantidade de meses necessários: " + meses);
 		
 		input.close();
 	}

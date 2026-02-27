@@ -7,7 +7,14 @@ public class Exercicio21 {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 	
-		 //escreva seu código aqui
+		System.out.println("Digite a senha: ");
+		int senha = input.nextInt();
+
+		if (senha == 1234) {
+			System.out.println("ACESSO PERMITIDO");
+		} else {
+			System.out.println("ACESSO NEGADO");
+		}
 		
 		input.close();
 	}

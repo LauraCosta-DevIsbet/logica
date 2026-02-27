@@ -8,7 +8,22 @@ public class Exercicio9 {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in); 
 
-		 //escreva seu código aqui
+		 System.out.println("Digite a sua idade:");
+		 int idade = input.nextInt();
+
+		 if (idade < 5) {
+			System.out.println("Você é muito jovem, por isso não pertence a nenhuma categoria.");	
+		 } else if (idade >= 5 && idade <= 7) {
+			System.out.println("Você está na categoria infantil.");
+		 } else if (idade >= 8 && idade <= 10) {
+			System.out.println("Você está na categoria juvenil.");
+		 } else if (idade >= 11 && idade <= 15) {
+			System.out.println("Você está na categoria adolescente.");
+		 } else if (idade >= 16 && idade <= 30) {
+			System.out.println("Você está na categoria adulto.");
+		 } else {
+			System.out.println("Você está na categoria sênior.");
+		 }
 
 		input.close();
 	}

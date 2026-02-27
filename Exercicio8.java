@@ -8,7 +8,19 @@ public class Exercicio8 {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in); 
 
-		 //escreva seu código aqui
+		 System.out.println("Quantas maçãs você comprou? ");
+		 int qtdMacas = input.nextInt();
+
+		 double precoMacas;
+		 if (qtdMacas < 12) {
+			 precoMacas = 0.30;
+		 } else {
+			 precoMacas = 0.25;
+		 }
+
+		 double custoTotal = qtdMacas * precoMacas;
+
+		 System.out.println("O total das suas maçãs é: R$ " + custoTotal);
 
 		input.close();
 	}
