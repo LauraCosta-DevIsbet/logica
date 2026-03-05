@@ -3,19 +3,29 @@
 import java.util.Scanner;
 
 public class Exercicio32 {
-    public static int somar (int numero){
-        if(numero == 0) return 0;
-        return numero+somar(numero-1);
+    public static int somar(int numero) {
+        
+        if (numero == 0) {
+            return 0;
+        }
+        
+        return numero + somar(numero - 1);
     }
     
-	public static void main(String[] args) {
-		Scanner input = new Scanner(System.in); 
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in); 
 
-		System.out.print("Informe um número: ");
-		int num = input.nextInt();
-		
-		System.out.println("O somatório de 1 a " + num + somar(num));
-		
-		input.close();
-	}
+        System.out.print("Informe um número para calcular o somatório de 1 a N: ");
+        int num = input.nextInt();
+        
+        
+        if (num < 0) {
+            System.out.println("Por favor, informe um número inteiro positivo.");
+        } else {
+            
+            System.out.println("O somatório de 1 a " + num + " é: " + somar(num));
+        }
+        
+        input.close();
+    }
 }
